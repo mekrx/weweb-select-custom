@@ -74,6 +74,7 @@ export default {
                 '--placeholder-color': props.content.searchPlaceholderColor,
                 outline: props.content.searchOutline,
                 'outline-offset': props.content.searchOutlineOffset,
+                cursor: props.content.optionCursor,
                 ...borderCss,
             };
         });

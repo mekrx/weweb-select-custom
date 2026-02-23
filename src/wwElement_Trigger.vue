@@ -174,6 +174,7 @@ export default {
                 height: props.content.triggerHeight,
                 'border-radius': props.content.triggerBorderRadius,
                 'box-shadow': props.content.triggerShadows,
+                cursor: props.content.optionCursor,
 
                 display: 'flex',
                 'flex-direction': 'row',
@@ -258,6 +259,7 @@ export default {
                 padding: props.content.chipPadding,
                 'background-color': props.content.chipBgColor,
                 'border-radius': props.content.chipBorderRadius,
+                cursor: props.content.optionCursor,
                 ...borderCss,
             };
         });
