@@ -92,7 +92,7 @@ export default {
                 'font-family': props.content.optionFontFamily,
                 'font-size': props.content.optionFontSize,
                 'font-weight': props.content.optionFontWeight,
-                cursor: props.content.optionCursor,
+                cursor: 'pointer',
                 'border-radius': props.content.optionBorderRadius,
                 border: props.content.optionBorder,
                 '--ww-select-option-bg-color-hover': props.content.optionBgColorHover,

@@ -30,7 +30,7 @@ export default {
             {
                 label: "Placeholder",
                 isCollapsible: true,
-                properties:       [
+                properties: [
                     'placeholderFontFamily',
                     'placeholderFontSize',
                     'placeholderFontWeight',
@@ -217,12 +217,12 @@ export default {
                     'heavyModeInfobox',
                     'itemSize',
                 ],
-            },  
+            },
             {
                 label: "Search",
                 isCollapsible: true,
                 properties: ['searchTitle', 'showSearch', 'searchBy', 'autoFocus'],
-            },        
+            },
             'formInfobox',
             ['fieldName', 'customValidation', 'validation'],
         ],
@@ -2054,9 +2054,8 @@ export default {
                 variant: 'warning',
                 icon: 'warning',
                 title: 'Many options detected',
-                content: `You have ${
-                    content.choices?.length || 0
-                } options and no max-height has been set. A default max-height of 500px has been applied to the dropdown to prevent performance issues.`,
+                content: `You have ${content.choices?.length || 0
+                    } options and no max-height has been set. A default max-height of 500px has been applied to the dropdown to prevent performance issues.`,
             }),
             hidden: content => !!content.dropdownMaxHeight || !content.choices?.length || content.choices.length <= 100,
         },
@@ -2353,7 +2352,60 @@ export default {
             responsive: true,
             defaultValue: '#f5f5f5',
         },
-
+        optionCursor: {
+            label: { en: 'cursor' },
+            type: 'TextSelect',
+            options: {
+                options: [
+                    { value: 'auto', label: 'Auto' },
+                    { value: 'default', label: 'Default' },
+                    { value: 'pointer', label: 'Pointer' },
+                    { value: 'none', label: 'None' },
+                    { value: 'not-allowed', label: 'Not allowed' },
+                    { value: 'help', label: 'Help' },
+                    { value: 'text', label: 'Text' },
+                    { value: 'move', label: 'Move' },
+                    { value: 'grab', label: 'Grab' },
+                    { value: 'grabbing', label: 'Grabbing', default: true },
+                    { value: 'n-resize', label: 'Arrow up' },
+                    { value: 's-resize', label: 'Arrow down' },
+                    { value: 'w-resize', label: 'Arrow left' },
+                    { value: 'e-resize', label: 'Arrow right' },
+                    { value: 'ne-resize', label: 'Arrow top-right' },
+                    { value: 'nw-resize', label: 'Arrow top-left' },
+                    { value: 'se-resize', label: 'Arrow bottom-right' },
+                    { value: 'sw-resize', label: 'Arrow bottom-left' },
+                    { value: 'ew-resize', label: 'Arrow left-right' },
+                    { value: 'ns-resize', label: 'Arrow up-down' },
+                    { value: 'nesw-resize', label: 'Arrow top-right to bottom-left' },
+                    { value: 'nwse-resize', label: 'Arrow top-left to bottom-right' },
+                    { value: 'zoom-in', label: 'Zoom in' },
+                    { value: 'zoom-out', label: 'Zoom out' },
+                    { value: 'col-resize', label: 'Column resize' },
+                    { value: 'row-resize', label: 'Row resize' },
+                    { value: 'all-scroll', label: 'All-scroll' },
+                    { value: 'context-menu', label: 'Context menu' },
+                    { value: 'cell', label: 'Cell' },
+                    { value: 'crosshair', label: 'Crosshair' },
+                    { value: 'vertical-text', label: 'Vertical text' },
+                    { value: 'alias', label: 'Alias' },
+                    { value: 'copy', label: 'Copy' },
+                    { value: 'progress', label: 'Progress' },
+                    { value: 'wait', label: 'Wait' },
+                ],
+            },
+            states: true,
+            classes: true,
+            bindable: true,
+            responsive: true,
+            /* wwEditor:start */
+            bindingValidation: {
+                type: 'string',
+                tooltip: 'A string that represent the cursor type',
+            },
+            /* wwEditor:end */
+            defaultValue: 'pointer',
+        },
         optionIcon: {
             label: { en: 'Checked icon', fr: 'Icône check' },
             type: 'SystemIcon',
